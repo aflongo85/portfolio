@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'portfolio_afl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio_afl_db',
+        'USER': 'postgres',
+        'PASSWORD': 'dyd666!',
+        'HOST': 'localhost',
+        'PORT': '5432'
+
+
     }
 }
 
