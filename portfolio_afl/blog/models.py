@@ -11,6 +11,10 @@ class Blog(models.Model):
     body_text = models.TextField(default='')
     pub_date = models.DateTimeField(timezone.now())
 
+    #This is to show the title in the admin panel
+    def __str__(self):
+        return self.title
+
     def summary(self):
         return self.body[:100]
 
