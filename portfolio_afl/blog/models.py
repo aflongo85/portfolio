@@ -10,4 +10,9 @@ class Blog(models.Model):
     subtitle = models.CharField(max_length=100, default='')
     body_text = models.TextField(default='')
     pub_date = models.DateTimeField(timezone.now())
-2
+
+    def summary(self):
+        return self.body[:100]
+
+    def pretty_date(self):
+        return self.pub_date.strftime('%e %b %Y')
