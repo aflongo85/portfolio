@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                      <a class="nav-link" href="#">Home </a>
+                      <a class="nav-link" href="home">Home </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">LinkedIn</a>
@@ -37,25 +37,21 @@
                       <a class="nav-link" href="#">Pricing</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="blog">Blog</a>
+                      <a class="nav-link active" href="blog">Blog</a>
                     </li>
                   </ul>
                 </div>
             </nav>
         </header>
 
-      <main role="main">
-
-        <section class="jumbotron text-center">
+        <main role="main">
           <div class="container">
-            <h1 class="jumbotron-heading">Hi, I'm Andrea</h1>
-            <p class="lead text-muted">If you ever need anything please don't hesitate to ask someone else first.</p>
-            <p>
-              <a href="mailto:andreaflongo@gmail.com" class="btn btn-primary my-2">Mail me</a>
-              <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
-            </p>
+             <h1 class="text-center pt-3">Welcom to Andrea's Blog</h1>
+            <br />
+            <br />
+            <h3>Latest Posts:</h3>
+            <hr />
           </div>
-        </section>
 
         <div class="album py-5 bg-light">
           <div class="container">
@@ -69,10 +65,9 @@
                     <p class="card-text">{{ blog.title }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                         <p class="card-text">{{ blog.subtitle }}</p>
                       </div>
-                      <small class="text-muted">9 mins</small>
+                      <small class="text-muted">{{ blog.pub_date }}</small>
                     </div>
                   </div>
                 </div>
