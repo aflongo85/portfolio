@@ -1,6 +1,7 @@
 
   <!doctype html>
   <html lang="en">
+  {% load staticfiles %}
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,13 +29,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                      <a class="nav-link" href="home">Home </a>
+                      <a class="nav-link" href="{% url 'home' %}">Home </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Pricing</a>
+                      <a class="nav-link" href="{% static 'heroku-tutorial.pdf' %}">Resume</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="blog">Blog</a>
@@ -54,6 +55,7 @@
               <a href="mailto:andreaflongo@gmail.com" class="btn btn-primary my-2">Mail me</a>
               <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
             </p>
+            <img src="{% static 'me_long_hair.jpg' %}" height="300">
           </div>
         </section>
 
